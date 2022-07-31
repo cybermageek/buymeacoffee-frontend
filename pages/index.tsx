@@ -7,8 +7,7 @@ import { abi as contractAbi } from "../abis/BuyMeACoffee.json";
 import { Contract, ethers } from "ethers";
 
 const Home: NextPage = () => {
-  const contractAddress = "0x134C96daAeBf0e99fb2ED69bB48E73EaCDc5aE61";
-
+  const contractAddress = process.env.CONTRACT_ADDRESS!;
   const [currentAccount, setCurrentAccount] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
